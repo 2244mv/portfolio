@@ -6,7 +6,7 @@ export const sendEmail = async (formData) => {
       import.meta.env.VITE_EMAIL_SERVICE_ID,
       import.meta.env.VITE_EMAIL_TEMPLATE_ID,
       formData,
-      import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      import.meta.env.VITE_EMAIL_PUBLIC_KEY,
     );
 
     console.log("EmailJS Success:", response);

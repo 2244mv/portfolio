@@ -1,13 +1,7 @@
 import GithubSection from "../sections/GithubSection";
 
-
 const Github = () => {
-
-  return (
-    <GithubSection />
-  );
-
+  return <GithubSection />;
 };
-
 
 export default Github;

@@ -9,10 +9,13 @@ const ProjectsSection = () => {
       id="projects"
       className="
         min-h-screen
+        scroll-mt-20
         flex
         items-center
         py-8
+        pb-32
         lg:py-10
+        lg:pb-10
       "
     >
       <div
@@ -23,7 +26,6 @@ const ProjectsSection = () => {
           px-5
         "
       >
-
         {/* Heading */}
 
         <motion.div
@@ -31,21 +33,24 @@ const ProjectsSection = () => {
             opacity: 0,
             y: 25,
           }}
+
           whileInView={{
             opacity: 1,
             y: 0,
           }}
+
           viewport={{
             once: true,
           }}
+
           transition={{
             duration: 0.5,
           }}
+
           className="
             text-center
           "
         >
-
           <p
             className="
               text-[#39FF88]
@@ -56,7 +61,6 @@ const ProjectsSection = () => {
           >
             Portfolio
           </p>
-
 
           <h2
             className="
@@ -69,7 +73,6 @@ const ProjectsSection = () => {
             Featured Projects
           </h2>
 
-
           <p
             className="
               mx-auto
@@ -79,13 +82,10 @@ const ProjectsSection = () => {
               text-gray-400
             "
           >
-            A collection of modern React applications showcasing
-            UI development, API integration and frontend engineering.
+            A collection of modern React applications showcasing UI development,
+            API integration and frontend engineering.
           </p>
-
         </motion.div>
-
-
 
         {/* Project Grid */}
 
@@ -94,16 +94,20 @@ const ProjectsSection = () => {
             opacity: 0,
             y: 35,
           }}
+
           whileInView={{
             opacity: 1,
             y: 0,
           }}
+
           viewport={{
             once: true,
           }}
+
           transition={{
             duration: 0.6,
           }}
+
           className="
             mt-8
             grid
@@ -113,40 +117,33 @@ const ProjectsSection = () => {
             lg:gap-6
           "
         >
-
           {projects.map((project, index) => (
-
             <motion.div
               key={project.id}
+
               initial={{
-                opacity:0,
-                scale:0.95,
+                opacity: 0,
+                scale: 0.95,
               }}
+
               whileInView={{
-                opacity:1,
-                scale:1,
+                opacity: 1,
+                scale: 1,
               }}
+
               viewport={{
-                once:true,
+                once: true,
               }}
+
               transition={{
-                delay:index * 0.1,
+                delay: index * 0.1,
               }}
             >
-
-              <ProjectCard
-                project={project}
-              />
-
+              <ProjectCard project={project} />
             </motion.div>
-
           ))}
-
         </motion.div>
-
-
       </div>
-
     </section>
   );
 };

@@ -1,74 +1,164 @@
 import { Home, User, Brain, Code2, Mail } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const Sidebar = () => {
+  const [activeSection, setActiveSection] = useState("home");
+
   const links = [
     {
       icon: <Home size={20} />,
-      path: "/",
+      id: "home",
+      name: "Home",
     },
 
     {
       icon: <User size={20} />,
-      path: "/about",
+      id: "about",
+      name: "About",
     },
 
     {
       icon: <Brain size={20} />,
-      path: "/skills",
+      id: "skills",
+      name: "Skills",
     },
 
     {
       icon: <Code2 size={20} />,
-      path: "/projects",
+      id: "projects",
+      name: "Projects",
     },
 
     {
       icon: <FaGithub size={20} />,
-      path: "/github",
+      id: "github",
+      name: "Github",
     },
 
     {
       icon: <Mail size={20} />,
-      path: "/contact",
+      id: "contact",
+      name: "Contact",
     },
   ];
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.55,
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleScroll = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <aside
-      className="
-      hidden
-      md:flex
-      fixed
-      left-4
-      top-24
-      w-14
-      h-[80vh]
-      glass
-      rounded-2xl
-      flex-col
-      items-center
-      justify-center
-      gap-8
-      z-40
-      "
-    >
-      {links.map((item, index) => (
-        <a
-          key={index}
-          href={item.path}
-          className="
-            text-gray-400
-            hover:text-[#39FF88]
-            transition-all
-            duration-300
-            hover:scale-110
-            "
-        >
-          {item.icon}
-        </a>
-      ))}
+    <aside>
+      {/* Desktop Sidebar */}
+
+      <div
+        className="
+          hidden
+          lg:flex
+          fixed
+          left-4
+          top-24
+          w-14
+          h-[80vh]
+          glass
+          rounded-2xl
+          flex-col
+          items-center
+          justify-center
+          gap-8
+          z-50
+        "
+      >
+        {links.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleScroll(item.id)}
+            title={item.name}
+            className={`
+                transition-all
+                duration-300
+
+                ${
+                  activeSection === item.id
+                    ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
+                    : "text-gray-400 hover:text-[#39FF88] hover:scale-110"
+                }
+              `}
+          >
+            {item.icon}
+          </button>
+        ))}
+      </div>
+
+      {/* Mobile Bottom Navigation */}
+
+      <div
+        className="
+          lg:hidden
+          fixed
+          bottom-5
+          left-1/2
+          -translate-x-1/2
+          w-[92%]
+          max-w-md
+          glass
+          rounded-2xl
+          flex
+          items-center
+          justify-around
+          py-4
+          z-50
+          border
+          border-white/10
+        "
+      >
+        {links.map((item) => (
+          <button
+            key={item.id}
+
+            onClick={() => handleScroll(item.id)}
+
+            className={`
+                transition-all
+                duration-300
+
+                ${
+                  activeSection === item.id
+                    ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
+                    : "text-gray-400 hover:text-[#39FF88]"
+                }
+              `}
+          >
+            {item.icon}
+          </button>
+        ))}
+      </div>
     </aside>
   );
 };

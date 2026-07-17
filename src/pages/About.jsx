@@ -1,13 +1,7 @@
 import AboutSection from "../sections/AboutSection";
 
-
 const About = () => {
-
-  return (
-    <AboutSection />
-  );
-
+  return <AboutSection />;
 };
-
 
 export default About;

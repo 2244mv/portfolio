@@ -32,7 +32,6 @@ const projects = [
     github: "https://github.com/2244mv/shifra",
   },
 
-
   {
     id: 2,
 
@@ -45,13 +44,7 @@ const projects = [
     description:
       "A modern AI chatbot application powered by Groq API with a clean ChatGPT-inspired interface, chat history, Markdown support, and responsive design.",
 
-    tech: [
-      "React.js",
-      "JavaScript",
-      "Groq API",
-      "Tailwind CSS",
-      "Vite",
-    ],
+    tech: ["React.js", "JavaScript", "Groq API", "Tailwind CSS", "Vite"],
 
     features: [
       "AI Chat Interface",
@@ -66,7 +59,6 @@ const projects = [
     github: "https://github.com/2244mv/ai-assistant",
   },
 
-
   {
     id: 3,
 
@@ -79,12 +71,7 @@ const projects = [
     description:
       "A modern e-commerce platform with product browsing, reusable components, responsive layouts, and a smooth shopping experience.",
 
-    tech: [
-      "React.js",
-      "JavaScript",
-      "Tailwind CSS",
-      "React Router",
-    ],
+    tech: ["React.js", "JavaScript", "Tailwind CSS", "React Router"],
 
     features: [
       "Product Listing",
@@ -99,7 +86,6 @@ const projects = [
     github: "https://github.com/2244mv/Ecom",
   },
 
-
   {
     id: 4,
 
@@ -112,13 +98,7 @@ const projects = [
     description:
       "A movie discovery platform that fetches real-time movie data using APIs with search functionality and a responsive browsing experience.",
 
-    tech: [
-      "React.js",
-      "JavaScript",
-      "API Integration",
-      "Tailwind CSS",
-      "Vite",
-    ],
+    tech: ["React.js", "JavaScript", "API Integration", "Tailwind CSS", "Vite"],
 
     features: [
       "Movie API Integration",

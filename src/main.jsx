@@ -1,52 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import {
-  BrowserRouter
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
+import { HelmetProvider } from "react-helmet-async";
 
-import {
-  HelmetProvider
-} from "react-helmet-async";
-
-
-import {
-  Toaster
-} from "react-hot-toast";
-
+import { Toaster } from "react-hot-toast";
 
 import App from "./App";
 
 import "./index.css";
 
-
-
-ReactDOM.createRoot(
-  document.getElementById("root")
-)
-.render(
-
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-
     <HelmetProvider>
-
       <BrowserRouter>
-
         <App />
 
         <Toaster
-
           position="top-right"
 
           reverseOrder={false}
 
           toastOptions={{
-
             duration: 4000,
 
             style: {
-
               background: "#0A0A0A",
 
               color: "#ffffff",
@@ -54,17 +33,10 @@ ReactDOM.createRoot(
               border: "1px solid #39FF88",
 
               borderRadius: "12px",
-
             },
-
           }}
-
         />
-
       </BrowserRouter>
-
     </HelmetProvider>
-
-  </React.StrictMode>
-
+  </React.StrictMode>,
 );

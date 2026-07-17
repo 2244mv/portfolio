@@ -1,21 +1,16 @@
 const Background = () => {
-
-
-return (
-
-<div
-className="
+  return (
+    <div
+      className="
 fixed
 inset-0
 overflow-hidden
 pointer-events-none
 z-0
 "
->
-
-
-<div
-className="
+    >
+      <div
+        className="
 absolute
 top-20
 left-10
@@ -25,12 +20,10 @@ bg-[#39FF88]/10
 rounded-full
 blur-[120px]
 "
-/>
+      />
 
-
-
-<div
-className="
+      <div
+        className="
 absolute
 right-10
 bottom-20
@@ -40,16 +33,9 @@ bg-purple-500/10
 rounded-full
 blur-[140px]
 "
-/>
-
-
-
-</div>
-
-);
-
-
+      />
+    </div>
+  );
 };
-
 
 export default Background;

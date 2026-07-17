@@ -15,10 +15,7 @@ const GithubCard = () => {
         duration-300
       "
     >
-      <FaGithub
-        size={42}
-        className="text-[#39FF88]"
-      />
+      <FaGithub size={42} className="text-[#39FF88]" />
 
       <h3
         className="
@@ -37,10 +34,9 @@ const GithubCard = () => {
           leading-relaxed
         "
       >
-        Frontend Developer passionate about building modern,
-        responsive, and user-friendly web applications using
-        React.js, JavaScript, Tailwind CSS, and modern frontend
-        technologies.
+        Frontend Developer passionate about building modern, responsive, and
+        user-friendly web applications using React.js, JavaScript, Tailwind CSS,
+        and modern frontend technologies.
       </p>
 
       <div
@@ -159,9 +155,7 @@ const GithubCard = () => {
           "
         >
           <FaGithub size={18} />
-
           Visit GitHub
-
           <ExternalLink size={16} />
         </a>
       </div>

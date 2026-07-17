@@ -7,18 +7,21 @@ const ContactSection = () => {
     <section
       id="contact"
       className="
-      min-h-screen
-      py-20
-      flex
-      items-center
+        min-h-screen
+        scroll-mt-20
+        py-20
+        pb-32
+        lg:pb-20
+        flex
+        items-center
       "
     >
       <div
         className="
-        max-w-6xl
-        mx-auto
-        w-full
-        px-5
+          max-w-6xl
+          mx-auto
+          w-full
+          px-5
         "
       >
         <motion.div
@@ -26,20 +29,22 @@ const ContactSection = () => {
             opacity: 0,
             y: 30,
           }}
+
           whileInView={{
             opacity: 1,
             y: 0,
           }}
+
           viewport={{
             once: true,
           }}
         >
           <p
             className="
-            text-[#39FF88]
-            uppercase
-            tracking-[4px]
-            text-sm
+              text-[#39FF88]
+              uppercase
+              tracking-[4px]
+              text-sm
             "
           >
             Contact
@@ -47,10 +52,10 @@ const ContactSection = () => {
 
           <h2
             className="
-            text-4xl
-            md:text-5xl
-            font-bold
-            mt-3
+              text-4xl
+              md:text-5xl
+              font-bold
+              mt-3
             "
           >
             Let's Build Something Together
@@ -58,10 +63,10 @@ const ContactSection = () => {
 
           <p
             className="
-            text-gray-400
-            mt-5
-            max-w-2xl
-            leading-relaxed
+              text-gray-400
+              mt-5
+              max-w-2xl
+              leading-relaxed
             "
           >
             Have a project idea or frontend opportunity? Feel free to reach out.
@@ -74,19 +79,23 @@ const ContactSection = () => {
             opacity: 0,
             y: 40,
           }}
+
           whileInView={{
             opacity: 1,
             y: 0,
           }}
+
           transition={{
             duration: 0.6,
           }}
+
           viewport={{
             once: true,
           }}
+
           className="
-          mt-10
-          max-w-3xl
+            mt-10
+            max-w-3xl
           "
         >
           <ContactForm />
