@@ -1,60 +1,42 @@
-import {
-  Home,
-  User,
-  Brain,
-  Code2,
-  Mail
-} from "lucide-react";
+import { Home, User, Brain, Code2, Mail } from "lucide-react";
 
-
-import {
-  FaGithub
-} from "react-icons/fa";
-
+import { FaGithub } from "react-icons/fa";
 
 const Sidebar = () => {
-
-
   const links = [
-
     {
       icon: <Home size={20} />,
-      path: "/"
+      path: "/",
     },
 
     {
       icon: <User size={20} />,
-      path: "/about"
+      path: "/about",
     },
 
     {
       icon: <Brain size={20} />,
-      path: "/skills"
+      path: "/skills",
     },
 
     {
       icon: <Code2 size={20} />,
-      path: "/projects"
+      path: "/projects",
     },
 
     {
       icon: <FaGithub size={20} />,
-      path: "/github"
+      path: "/github",
     },
 
     {
       icon: <Mail size={20} />,
-      path: "/contact"
-    }
-
+      path: "/contact",
+    },
   ];
 
-
-
   return (
-
     <aside
-
       className="
       hidden
       md:flex
@@ -71,42 +53,24 @@ const Sidebar = () => {
       gap-8
       z-40
       "
-
     >
-
-
-      {
-        links.map((item,index)=>(
-
-          <a
-
-            key={index}
-
-            href={item.path}
-
-            className="
+      {links.map((item, index) => (
+        <a
+          key={index}
+          href={item.path}
+          className="
             text-gray-400
             hover:text-[#39FF88]
             transition-all
             duration-300
             hover:scale-110
             "
-
-          >
-
-            {item.icon}
-
-          </a>
-
-        ))
-      }
-
-
+        >
+          {item.icon}
+        </a>
+      ))}
     </aside>
-
   );
-
 };
-
 
 export default Sidebar;

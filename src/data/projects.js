@@ -1,7 +1,40 @@
 const projects = [
-
   {
     id: 1,
+
+    featured: true,
+
+    title: "Shifra AI Voice Assistant",
+
+    image: "/images/projects/shifra.png",
+
+    description:
+      "A futuristic AI voice assistant with speech recognition, AI conversations, voice responses, and an interactive assistant experience.",
+
+    tech: [
+      "React.js",
+      "JavaScript",
+      "Groq API",
+      "Web Speech API",
+      "Tailwind CSS",
+    ],
+
+    features: [
+      "AI Voice Conversations",
+      "Speech Recognition",
+      "Text To Speech Response",
+      "Real-Time AI Interaction",
+      "Responsive Futuristic UI",
+    ],
+
+    live: "https://shifra-roan.vercel.app/",
+
+    github: "https://github.com/2244mv/shifra",
+  },
+
+
+  {
+    id: 2,
 
     featured: true,
 
@@ -10,108 +43,61 @@ const projects = [
     image: "/images/projects/ai-assistant.png",
 
     description:
-      "A modern AI assistant application inspired by Gemini and ChatGPT. It provides AI conversations with a clean interface, chat history, Markdown support, and responsive design.",
+      "A modern AI chatbot application powered by Groq API with a clean ChatGPT-inspired interface, chat history, Markdown support, and responsive design.",
 
     tech: [
       "React.js",
       "JavaScript",
+      "Groq API",
       "Tailwind CSS",
       "Vite",
-      "API Integration"
     ],
 
     features: [
       "AI Chat Interface",
       "Chat History Management",
-      "Markdown Response Rendering",
+      "Markdown Rendering",
       "Dark Mode Support",
-      "Fully Responsive UI"
+      "Responsive UI",
     ],
 
-    live:
-      "https://ai-assistant-seven-sable.vercel.app/",
+    live: "https://ai-assistant-seven-sable.vercel.app/",
 
-    github:
-      "https://github.com/2244mv/ai-assistant"
-
+    github: "https://github.com/2244mv/ai-assistant",
   },
-
-
-
-  {
-    id: 2,
-
-    featured: true,
-
-    title: "MovieFlix",
-
-    image: "/images/projects/movieflix.png",
-
-    description:
-      "A movie discovery application that fetches real-time movie data using APIs. Users can explore movies with a clean and responsive browsing experience.",
-
-    tech: [
-      "React.js",
-      "JavaScript",
-      "API",
-      "Tailwind CSS",
-      "Vite"
-    ],
-
-    features: [
-      "Movie API Integration",
-      "Dynamic Movie Cards",
-      "Responsive Layout",
-      "Search Experience",
-      "Reusable Components"
-    ],
-
-    live:
-      "https://movie-flix-movie-app.vercel.app/",
-
-    github:
-      "https://github.com/2244mv/MovieFlix-movie-app"
-
-  },
-
 
 
   {
     id: 3,
 
-    featured: false,
+    featured: true,
 
-    title: "E-Commerce Website",
+    title: "E-Commerce Platform",
 
-    image:
-      "/images/projects/ecom.png",
+    image: "/images/projects/ecom.png",
 
     description:
-      "A modern e-commerce frontend application with product browsing, responsive layouts, reusable components, and a smooth shopping experience.",
+      "A modern e-commerce platform with product browsing, reusable components, responsive layouts, and a smooth shopping experience.",
 
     tech: [
       "React.js",
       "JavaScript",
       "Tailwind CSS",
-      "React Router"
+      "React Router",
     ],
 
     features: [
       "Product Listing",
-      "Responsive Design",
       "Reusable Components",
-      "Modern UI Layout",
-      "Navigation System"
+      "Responsive Design",
+      "Navigation System",
+      "Modern Shopping UI",
     ],
 
-    live:
-      "https://ecom-gilt-kappa.vercel.app/",
+    live: "https://ecom-gilt-kappa.vercel.app/",
 
-    github:
-      "https://github.com/2244mv/Ecom"
-
+    github: "https://github.com/2244mv/Ecom",
   },
-
 
 
   {
@@ -119,38 +105,33 @@ const projects = [
 
     featured: false,
 
-    title: "Shopsy",
+    title: "MovieFlix",
 
-    image:
-      "/images/projects/shopsy.png",
+    image: "/images/projects/movieflix.png",
 
     description:
-      "A shopping interface focused on modern UI design, responsive layouts, and frontend component architecture using React.",
+      "A movie discovery platform that fetches real-time movie data using APIs with search functionality and a responsive browsing experience.",
 
     tech: [
       "React.js",
       "JavaScript",
-      "CSS",
-      "Frontend UI"
+      "API Integration",
+      "Tailwind CSS",
+      "Vite",
     ],
 
     features: [
-      "Modern Shopping UI",
-      "Component Based Architecture",
-      "Responsive Screens",
-      "Clean User Experience"
+      "Movie API Integration",
+      "Dynamic Movie Cards",
+      "Search Experience",
+      "Reusable Components",
+      "Responsive Layout",
     ],
 
-    live:
-      "https://shopsy-nine-snowy.vercel.app/",
+    live: "https://movie-flix-movie-app.vercel.app/",
 
-    github:
-      "https://github.com/2244mv/Shopsy"
-
-  }
-
-
+    github: "https://github.com/2244mv/MovieFlix-movie-app",
+  },
 ];
-
 
 export default projects;

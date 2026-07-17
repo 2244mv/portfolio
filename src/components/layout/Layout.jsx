@@ -1,17 +1,12 @@
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 import Background from "../ui/Background";
 import CursorGlow from "../ui/CursorGlow";
 
-
 const Layout = ({ children }) => {
-
-
   return (
-
     <div
-
       className="
       min-h-screen
       bg-[#050505]
@@ -19,17 +14,12 @@ const Layout = ({ children }) => {
       relative
       overflow-hidden
       "
-
     >
-
-
       <Background />
 
       <CursorGlow />
 
-
       <div
-
         className="
         fixed
         inset-0
@@ -37,19 +27,13 @@ const Layout = ({ children }) => {
         opacity-30
         pointer-events-none
         "
-
       />
 
-
-
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Sidebar />
 
-
-
       <main
-
         className="
         relative
         z-10
@@ -59,19 +43,11 @@ const Layout = ({ children }) => {
         sm:px-6
         lg:px-10
         "
-
       >
-
         {children}
-
       </main>
-
-
     </div>
-
   );
-
 };
-
 
 export default Layout;

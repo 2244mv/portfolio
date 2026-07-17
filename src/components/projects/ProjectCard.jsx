@@ -1,260 +1,208 @@
 import { motion } from "framer-motion";
-
-import {
-  ExternalLink
-} from "lucide-react";
-
-
-import {
-  FaGithub
-} from "react-icons/fa";
-
-
-const ProjectCard = ({project}) => {
-
-
-return (
-
-<motion.div
-
-whileHover={{
-y:-10
-}}
-
-className={`
-glass
-rounded-3xl
-overflow-hidden
-border
-transition
-${project.featured 
-? "border-[#39FF88]/50 shadow-[0_0_40px_rgba(57,255,136,0.2)]"
-:"border-white/10"
-}
-`}
-
->
-
-
-
-{/* IMAGE */}
-
-
-<div
-className="
-h-48
-overflow-hidden
-"
->
-
-
-<img
-
-src={project.image}
-
-alt={project.title}
-
-className="
-w-full
-h-full
-object-cover
-hover:scale-110
-transition
-duration-500
-"
-
-/>
-
-
-</div>
-
-
-
-
-
-<div
-className="
-p-6
-"
->
-
-
-{
-project.featured &&
-
-<span
-className="
-text-xs
-px-3
-py-1
-rounded-full
-bg-[#39FF88]
-text-black
-font-semibold
-"
->
-
-Featured
-
-</span>
-
-}
-
-
-
-
-<h3
-className="
-text-2xl
-font-bold
-mt-4
-"
->
-
-{project.title}
-
-</h3>
-
-
-
-
-<p
-className="
-text-gray-400
-mt-3
-leading-relaxed
-"
->
-
-{project.description}
-
-</p>
-
-
-
-
-
-<div
-className="
-flex
-flex-wrap
-gap-2
-mt-5
-"
->
-
-
-{
-project.tech.map((item)=>(
-
-<span
-
-key={item}
-
-className="
-px-3
-py-1
-text-xs
-rounded-lg
-bg-white/5
-text-gray-300
-"
-
->
-
-{item}
-
-</span>
-
-))
-}
-
-
-</div>
-
-
-
-
-
-<div
-className="
-flex
-gap-4
-mt-6
-"
->
-
-
-<a
-
-href={project.live}
-
-target="_blank"
-
-rel="noreferrer"
-
-className="
-flex
-items-center
-gap-2
-px-4
-py-2
-rounded-xl
-bg-[#39FF88]
-text-black
-font-medium
-"
-
->
-
-<ExternalLink size={16}/>
-
-Live
-
-</a>
-
-
-
-
-<a
-
-href={project.github}
-
-target="_blank"
-
-rel="noreferrer"
-
-className="
-flex
-items-center
-gap-2
-px-4
-py-2
-rounded-xl
-glass
-"
-
->
-
-<FaGithub size={16}/>
-
-Code
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</motion.div>
-
-);
-
-
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
+const ProjectCard = ({ project }) => {
+  return (
+    <motion.article
+      whileHover={{
+        y: -6,
+        scale: 1.02,
+      }}
+      transition={{
+        duration: 0.25,
+      }}
+      className="
+        group
+        relative
+        flex
+        h-full
+        flex-col
+        overflow-hidden
+        rounded-2xl
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        hover:border-[#39FF88]/40
+        hover:shadow-[0_0_30px_rgba(57,255,136,0.15)]
+      "
+    >
+      {/* Glow */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-br
+          from-[#39FF88]/10
+          via-transparent
+          to-transparent
+          opacity-0
+          transition
+          duration-500
+          group-hover:opacity-100
+        "
+      />
+
+      {/* Image */}
+      <div
+        className="
+          relative
+          h-32
+          sm:h-36
+          overflow-hidden
+        "
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="
+            h-full
+            w-full
+            object-cover
+            transition
+            duration-700
+            group-hover:scale-110
+          "
+        />
+
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-black
+            via-black/20
+            to-transparent
+          "
+        />
+      </div>
+
+      {/* Content */}
+      <div
+        className="
+          relative
+          flex
+          flex-1
+          flex-col
+          p-4
+        "
+      >
+        <h3
+          className="
+            truncate
+            text-lg
+            font-bold
+            text-white
+          "
+        >
+          {project.title}
+        </h3>
+
+        {/* Short Description */}
+        <div className="relative mt-2">
+          <p
+            className="
+              line-clamp-2
+              text-sm
+              leading-5
+              text-gray-400
+            "
+          >
+            {project.description}
+          </p>
+        </div>
+
+        {/* Tech */}
+        <div
+          className="
+            mt-3
+            flex
+            flex-wrap
+            gap-1.5
+          "
+        >
+          {project.tech.map((item) => (
+            <span
+              key={item}
+              className="
+                rounded-full
+                border
+                border-[#39FF88]/20
+                bg-[#39FF88]/10
+                px-2
+                py-0.5
+                text-[10px]
+                text-[#39FF88]
+              "
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* Buttons */}
+        <div
+          className="
+            mt-4
+            flex
+            gap-2
+          "
+        >
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noreferrer"
+            className="
+              flex-1
+              flex
+              items-center
+              justify-center
+              gap-1.5
+              rounded-lg
+              bg-[#39FF88]
+              py-2
+              text-xs
+              font-semibold
+              text-black
+              transition
+              hover:scale-105
+            "
+          >
+            <ExternalLink size={14} />
+            Live
+          </a>
+
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="
+              flex-1
+              flex
+              items-center
+              justify-center
+              gap-1.5
+              rounded-lg
+              border
+              border-white/10
+              bg-white/5
+              py-2
+              text-xs
+              transition
+              hover:border-[#39FF88]
+              hover:text-[#39FF88]
+            "
+          >
+            <FaGithub size={14} />
+            Code
+          </a>
+        </div>
+      </div>
+    </motion.article>
+  );
 };
-
 
 export default ProjectCard;

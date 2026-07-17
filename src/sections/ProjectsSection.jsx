@@ -1,78 +1,152 @@
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-import ProjectSlide from "../components/projects/ProjectSlide";
+import ProjectCard from "../components/projects/ProjectCard";
 import projects from "../data/projects";
 
 const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-24"
+      className="
+        min-h-screen
+        flex
+        items-center
+        py-8
+        lg:py-10
+      "
     >
-      <div className="max-w-7xl mx-auto">
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          w-full
+          px-5
+        "
+      >
+
+        {/* Heading */}
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="
+            text-center
+          "
         >
-          <p className="text-[#39FF88] uppercase tracking-[4px] text-sm">
+
+          <p
+            className="
+              text-[#39FF88]
+              uppercase
+              tracking-[3px]
+              text-xs
+            "
+          >
             Portfolio
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold mt-3">
+
+          <h2
+            className="
+              mt-2
+              text-3xl
+              lg:text-4xl
+              font-bold
+            "
+          >
             Featured Projects
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mt-5">
-            A selection of projects that demonstrate my React.js,
-            JavaScript, API integration, responsive design, and modern
-            frontend development skills.
+
+          <p
+            className="
+              mx-auto
+              mt-3
+              max-w-xl
+              text-sm
+              text-gray-400
+            "
+          >
+            A collection of modern React applications showcasing
+            UI development, API integration and frontend engineering.
           </p>
+
         </motion.div>
 
+
+
+        {/* Project Grid */}
+
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
           className="
-            relative
-            mt-14
-            rounded-[32px]
-            border
-            border-white/10
-            bg-white/5
-            backdrop-blur-xl
-            p-6
-            lg:p-10
-            overflow-hidden
+            mt-8
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            gap-5
+            lg:gap-6
           "
         >
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 4500,
-              disableOnInteraction: false,
-            }}
-            loop
-          >
-            {projects.map((project) => (
-              <SwiperSlide key={project.id}>
-                <ProjectSlide project={project} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+          {projects.map((project, index) => (
+
+            <motion.div
+              key={project.id}
+              initial={{
+                opacity:0,
+                scale:0.95,
+              }}
+              whileInView={{
+                opacity:1,
+                scale:1,
+              }}
+              viewport={{
+                once:true,
+              }}
+              transition={{
+                delay:index * 0.1,
+              }}
+            >
+
+              <ProjectCard
+                project={project}
+              />
+
+            </motion.div>
+
+          ))}
+
         </motion.div>
+
+
       </div>
+
     </section>
   );
 };
