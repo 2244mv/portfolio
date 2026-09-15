@@ -6,21 +6,21 @@ import StrengthCard from "../components/about/StrengthCard";
 const AboutSection = () => {
   const strengths = [
     {
-      title: "Frontend Development",
+      title: "Full Stack Development",
       description:
-        "Building responsive and scalable interfaces using React.js, JavaScript and modern frontend technologies.",
+        "Building responsive and scalable web applications using React.js, Node.js, Express.js, and MongoDB.",
     },
 
     {
-      title: "Clean Architecture",
+      title: "Backend & API Development",
       description:
-        "Writing reusable components with maintainable and organized code structure.",
+        "Developing RESTful APIs, implementing authentication, managing databases, and connecting frontend applications with reliable backend services.",
     },
 
     {
-      title: "UI Engineering",
+      title: "Clean & Scalable Architecture",
       description:
-        "Creating modern user experiences with animations, accessibility and responsive design.",
+        "Writing reusable components and maintainable code with a focus on performance, scalability, and a smooth user experience.",
     },
   ];
 
@@ -46,16 +46,13 @@ const AboutSection = () => {
             opacity: 0,
             y: 40,
           }}
-
           whileInView={{
             opacity: 1,
             y: 0,
           }}
-
           transition={{
             duration: 0.7,
           }}
-
           viewport={{
             once: true,
           }}
@@ -75,7 +72,7 @@ const AboutSection = () => {
               font-bold
             "
           >
-            Building Digital Experiences with Modern Technology
+            Building Modern Full Stack Applications
           </h2>
 
           <p
@@ -86,12 +83,15 @@ const AboutSection = () => {
               leading-relaxed
             "
           >
-            I am a passionate Frontend Developer focused on creating
-            high-performance web applications. My expertise includes React.js,
-            JavaScript, Tailwind CSS and modern frontend workflows.
+            I am a MERN Full Stack Developer focused on building modern,
+            responsive, and scalable web applications. My expertise includes
+            React.js, Node.js, Express.js, MongoDB, REST APIs, and modern
+            frontend technologies.
             <br />
-            <br />I enjoy transforming ideas into clean, interactive and
-            user-friendly digital products.
+            <br />
+            I enjoy transforming ideas into reliable digital products by
+            combining clean user interfaces with efficient backend systems,
+            secure APIs, and well-structured code.
           </p>
         </motion.div>
 
@@ -121,3 +121,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+ 

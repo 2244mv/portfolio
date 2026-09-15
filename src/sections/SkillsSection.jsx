@@ -12,23 +12,34 @@ const SkillsSection = () => {
         "HTML5",
         "CSS3",
         "Tailwind CSS",
+        "Redux",
         "Responsive Design",
       ],
     },
 
     {
-      title: "Tools & Workflow",
-      skills: ["Vite", "Git", "GitHub", "npm", "REST API", "VS Code"],
+      title: "Backend & Database",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "REST APIs",
+        "JWT Authentication",
+        "Socket.IO",
+      ],
     },
 
     {
-      title: "UI & Experience",
+      title: "Tools & Technologies",
       skills: [
+        "Git",
+        "GitHub",
+        "Vite",
+        "npm",
+        "Cloudinary",
         "Framer Motion",
-        "Animations",
-        "Component Design",
-        "Accessibility",
-        "Performance Optimization",
+        "VS Code",
       ],
     },
   ];
@@ -55,12 +66,10 @@ const SkillsSection = () => {
             opacity: 0,
             y: 30,
           }}
-
           whileInView={{
             opacity: 1,
             y: 0,
           }}
-
           viewport={{
             once: true,
           }}
@@ -90,8 +99,9 @@ const SkillsSection = () => {
               max-w-2xl
             "
           >
-            A modern frontend toolkit focused on building scalable, responsive
-            and high-quality web applications.
+            A full stack technology toolkit for building scalable, responsive,
+            and production-ready web applications from frontend interfaces to
+            backend APIs and databases.
           </p>
         </motion.div>
 
@@ -114,3 +124,4 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+

@@ -34,9 +34,10 @@ const GithubCard = () => {
           leading-relaxed
         "
       >
-        Frontend Developer passionate about building modern, responsive, and
-        user-friendly web applications using React.js, JavaScript, Tailwind CSS,
-        and modern frontend technologies.
+        MERN Full Stack Developer focused on building modern, responsive, and
+        scalable web applications using React.js, Node.js, Express.js, and
+        MongoDB. I enjoy creating clean, maintainable solutions with a strong
+        focus on performance and user experience.
       </p>
 
       <div
@@ -62,7 +63,7 @@ const GithubCard = () => {
               text-[#39FF88]
             "
           >
-            4+
+            5+
           </h4>
 
           <p
@@ -91,7 +92,7 @@ const GithubCard = () => {
               text-[#39FF88]
             "
           >
-            React
+            MERN
           </h4>
 
           <p
@@ -101,7 +102,7 @@ const GithubCard = () => {
               mt-1
             "
           >
-            Primary
+            Full Stack
           </p>
         </div>
 
@@ -130,7 +131,7 @@ const GithubCard = () => {
               mt-1
             "
           >
-            Language
+            Core Language
           </p>
         </div>
       </div>

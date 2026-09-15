@@ -37,12 +37,10 @@ const HomeSection = () => {
             opacity: 0,
             x: -40,
           }}
-
           animate={{
             opacity: 1,
             x: 0,
           }}
-
           transition={{
             duration: 0.7,
           }}
@@ -55,7 +53,7 @@ const HomeSection = () => {
               text-sm
             "
           >
-            Frontend Developer
+            MERN Full Stack Developer
           </p>
 
           <h1
@@ -71,7 +69,7 @@ const HomeSection = () => {
             Building
             <span className="text-[#39FF88]"> Modern</span>
             <br />
-            React Experiences
+            Full Stack Applications
           </h1>
 
           <div
@@ -83,21 +81,19 @@ const HomeSection = () => {
           >
             <TypeAnimation
               sequence={[
+                "MERN Full Stack Developer",
+                2000,
+
                 "React.js Developer",
                 2000,
 
-                "Frontend Engineer",
+                "Node.js Developer",
                 2000,
 
-                "UI Developer",
-                2000,
-
-                "JavaScript Developer",
+                "Backend & API Developer",
                 2000,
               ]}
-
               speed={50}
-
               repeat={Infinity}
             />
           </div>
@@ -110,8 +106,10 @@ const HomeSection = () => {
               leading-relaxed
             "
           >
-            I create responsive, scalable and modern web applications using
-            React.js, JavaScript and contemporary frontend technologies.
+            I build responsive, scalable, and modern web applications using
+            React.js, Node.js, Express.js, and MongoDB, with a focus on clean
+            architecture, reliable APIs, performance, and great user
+            experiences.
           </p>
 
           <div
@@ -125,6 +123,7 @@ const HomeSection = () => {
             <a
               href="/resume.pdf"
               target="_blank"
+              rel="noreferrer"
               className="
                 flex
                 items-center
@@ -182,16 +181,13 @@ const HomeSection = () => {
             opacity: 0,
             scale: 0.8,
           }}
-
           animate={{
             opacity: 1,
             scale: 1,
           }}
-
           transition={{
             duration: 0.8,
           }}
-
           className="
             flex
             flex-col
@@ -225,7 +221,7 @@ const HomeSection = () => {
 
             <img
               src="/images/profile/manish.jpeg"
-              alt="Manish Verma"
+              alt="Manish Verma - MERN Full Stack Developer"
               className="
                 w-full
                 h-full
@@ -256,7 +252,7 @@ const HomeSection = () => {
                 mt-2
               "
             >
-              React Developer
+              MERN Full Stack Developer
             </p>
           </div>
         </motion.div>
@@ -266,3 +262,4 @@ const HomeSection = () => {
 };
 
 export default HomeSection;
+

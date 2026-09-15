@@ -24,85 +24,96 @@ const ContactSection = () => {
           px-5
         "
       >
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-
-          viewport={{
-            once: true,
-          }}
-        >
-          <p
-            className="
-              text-[#39FF88]
-              uppercase
-              tracking-[4px]
-              text-sm
-            "
-          >
-            Contact
-          </p>
-
-          <h2
-            className="
-              text-4xl
-              md:text-5xl
-              font-bold
-              mt-3
-            "
-          >
-            Let's Build Something Together
-          </h2>
-
-          <p
-            className="
-              text-gray-400
-              mt-5
-              max-w-2xl
-              leading-relaxed
-            "
-          >
-            Have a project idea or frontend opportunity? Feel free to reach out.
-            I am always open to building modern digital experiences.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-
-          transition={{
-            duration: 0.6,
-          }}
-
-          viewport={{
-            once: true,
-          }}
-
+        <div
           className="
-            mt-10
-            max-w-3xl
+            grid
+            lg:grid-cols-2
+            gap-12
+            lg:gap-16
+            items-center
           "
         >
-          <ContactForm />
-        </motion.div>
+          {/* LEFT CONTENT */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <p
+              className="
+                text-[#39FF88]
+                uppercase
+                tracking-[4px]
+                text-sm
+              "
+            >
+              Contact
+            </p>
+
+            <h2
+              className="
+                text-4xl
+                md:text-5xl
+                font-bold
+                mt-3
+                leading-tight
+              "
+            >
+              Let's Build Something Together
+            </h2>
+
+            <p
+              className="
+                text-gray-400
+                mt-5
+                max-w-xl
+                leading-relaxed
+              "
+            >
+              Have a project idea, job opportunity, or collaboration in mind?
+              Feel free to reach out. I am open to MERN Full Stack opportunities
+              and building modern, scalable web applications.
+            </p>
+          </motion.div>
+
+          {/* RIGHT CONTACT FORM */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <ContactForm />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default ContactSection;
+
+

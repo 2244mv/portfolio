@@ -33,20 +33,16 @@ const ProjectsSection = () => {
             opacity: 0,
             y: 25,
           }}
-
           whileInView={{
             opacity: 1,
             y: 0,
           }}
-
           viewport={{
             once: true,
           }}
-
           transition={{
             duration: 0.5,
           }}
-
           className="
             text-center
           "
@@ -82,8 +78,9 @@ const ProjectsSection = () => {
               text-gray-400
             "
           >
-            A collection of modern React applications showcasing UI development,
-            API integration and frontend engineering.
+            A collection of modern web applications showcasing full stack
+            development, real-time features, API integration, responsive UI,
+            and scalable application architecture.
           </p>
         </motion.div>
 
@@ -94,20 +91,16 @@ const ProjectsSection = () => {
             opacity: 0,
             y: 35,
           }}
-
           whileInView={{
             opacity: 1,
             y: 0,
           }}
-
           viewport={{
             once: true,
           }}
-
           transition={{
             duration: 0.6,
           }}
-
           className="
             mt-8
             grid
@@ -120,21 +113,17 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-
               initial={{
                 opacity: 0,
                 scale: 0.95,
               }}
-
               whileInView={{
                 opacity: 1,
                 scale: 1,
               }}
-
               viewport={{
                 once: true,
               }}
-
               transition={{
                 delay: index * 0.1,
               }}
@@ -149,3 +138,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+

@@ -1,6 +1,7 @@
 import { Home, User, Brain, Code2, Mail } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
+
 import { useEffect, useState } from "react";
 
 const Sidebar = () => {
@@ -68,7 +69,17 @@ const Sidebar = () => {
   }, []);
 
   const handleScroll = (id) => {
-    document.getElementById(id)?.scrollIntoView({
+    const section = document.getElementById(id);
+
+    if (!section) return;
+
+    const offset = 20;
+
+    const sectionPosition =
+      section.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: sectionPosition - offset,
       behavior: "smooth",
     });
   };
@@ -101,15 +112,15 @@ const Sidebar = () => {
             onClick={() => handleScroll(item.id)}
             title={item.name}
             className={`
-                transition-all
-                duration-300
+              transition-all
+              duration-300
 
-                ${
-                  activeSection === item.id
-                    ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
-                    : "text-gray-400 hover:text-[#39FF88] hover:scale-110"
-                }
-              `}
+              ${
+                activeSection === item.id
+                  ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
+                  : "text-gray-400 hover:text-[#39FF88] hover:scale-110"
+              }
+            `}
           >
             {item.icon}
           </button>
@@ -141,19 +152,17 @@ const Sidebar = () => {
         {links.map((item) => (
           <button
             key={item.id}
-
             onClick={() => handleScroll(item.id)}
-
             className={`
-                transition-all
-                duration-300
+              transition-all
+              duration-300
 
-                ${
-                  activeSection === item.id
-                    ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
-                    : "text-gray-400 hover:text-[#39FF88]"
-                }
-              `}
+              ${
+                activeSection === item.id
+                  ? "text-[#39FF88] scale-125 drop-shadow-[0_0_10px_#39FF88]"
+                  : "text-gray-400 hover:text-[#39FF88]"
+              }
+            `}
           >
             {item.icon}
           </button>
@@ -164,3 +173,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+

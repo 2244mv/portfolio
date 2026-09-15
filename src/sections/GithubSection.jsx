@@ -26,12 +26,10 @@ const GithubSection = () => {
             opacity: 0,
             y: 30,
           }}
-
           whileInView={{
             opacity: 1,
             y: 0,
           }}
-
           viewport={{
             once: true,
           }}
@@ -61,8 +59,8 @@ const GithubSection = () => {
               max-w-2xl
             "
           >
-            Explore my coding journey, projects, and development activity
-            through my GitHub profile.
+            Explore my projects, coding journey, and development activity
+            across frontend and backend technologies through my GitHub profile.
           </p>
         </motion.div>
 
